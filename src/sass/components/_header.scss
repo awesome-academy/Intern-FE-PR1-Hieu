@@ -49,11 +49,25 @@
 				@include mobile {
 					width: 100%;
 					text-align: center;
+					border-bottom: 1px solid $border-color;
+					&:hover {
+						background: $header-color;
+						a {
+							color: $primary-color;
+						}
+					}
 				}
 
 				@include tablet {
 					width: 100%;
 					text-align: center;
+					border-bottom: 1px solid $border-color;
+					&:hover {
+						background: $header-color;
+						a {
+							color: $primary-color;
+						}
+					}
 				}
 
 				&:hover > .mega-menu {
