@@ -9,7 +9,7 @@
 	font-size: 1.4rem;
 	color: $text-light-color;
 	font-family: Roboto, sans-serif;
-	padding: 6rem;
+
 	&__heading {
 		@include font(Roboto, 1.8, null, null, null);
 		text-transform: uppercase;
@@ -38,14 +38,7 @@
 			.item__link {
 				color: $text-light-color;
 				&::before {
-					content: '';
-					position: absolute;
-					@include box(5px);
-					background: $primary-color;
-					right: 100%;
-					top: 50%;
-					transform: translateY(-50%);
-					margin-right: 5px;
+					@include before-list-item;
 				}
 
 				&:hover {
@@ -61,5 +54,25 @@
 	}
 	&__expand {
 		padding-top: 3rem;
+
+		img {
+			float: right;
+			@include mobile {
+				float: none;
+				margin-top: 10px;
+			}
+
+			@include tablet {
+				float: none;
+				margin-top: 10px;
+			}
+		}
 	}
+}
+#footer__top {
+	padding: 6rem 6rem 0;
+}
+#footer__bottom {
+	padding: 0 6rem 3rem;
+	border-top: 1px solid $border-color;
 }
